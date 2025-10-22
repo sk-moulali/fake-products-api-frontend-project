@@ -1,5 +1,5 @@
 import logo from "../assets/ms-logo.png";
-import { BsBag } from "react-icons/bs";
+import { LuShoppingCart } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { SidebarContext } from "../Context/SidebarContext";
@@ -18,16 +18,16 @@ const Header = () => {
 
   return (
     <>
-      <div className="container flex items-center justify-between h-full">
+      <div className="flex items-center justify-between h-full bg-gray-300 shadow-lg">
         <Link to={"/"}>
-          <img src={logo} alt="" className="w-[100px] mb-10" />
+          <img src={logo} alt="" className="w-[100px]" />
         </Link>
         <div
           onClick={() => setIsOpen(!isOpen)}
           className="cursor-pointer flex relative"
         >
-          <BsBag className="text-2xl mb-10 mr-10" />
-          <div className="bg-red-500 absolute -left-0 -top-0.5 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
+          <LuShoppingCart className="text-4xl mb-0 mr-10" />
+          <div className="absolute left-2.5 -top-2 text-xs font-bold w-[23px] h-[20px] bg-red-600 text-white flex justify-center items-center rounded-full">
             {itemAmount}
           </div>
         </div>
