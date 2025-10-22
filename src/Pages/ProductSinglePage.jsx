@@ -44,7 +44,7 @@ function ProductSinglePage() {
             <p className="mb-8">{description}</p>
             <button
               onClick={() => addToCart(product, product.id)}
-              className="bg-green-400 py-4 px-8 text-white cursor-pointer"
+              className="bg-green-600 py-4 px-8 text-white cursor-pointer hover:bg-green-500"
             >
               Add to cart
             </button>
