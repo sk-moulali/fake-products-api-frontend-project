@@ -20,8 +20,11 @@ const Header = () => {
   return (
     <div className="fixed top-0 w-full bg-white">
       <div className="flex items-center justify-between h-full shadow-lg">
-        <Link to={"/"}>
+        <Link to={"/"} className="flex justify-center items-center relative">
           <img src={logo} alt="" className="w-[100px]" />
+          <h1 className="absolute left-18 text-2xl font-serif font-black">
+            Fashion
+          </h1>
         </Link>
         <div className="flex justify-center items-center gap-3">
           <IoSearch className="text-3xl cursor-pointer" />

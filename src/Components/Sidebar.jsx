@@ -23,6 +23,7 @@ const Sidebar = () => {
         <div className="uppercase text-sm font-semibold">
           Shopping Bag ({itemAmount})
         </div>
+
         <div
           onClick={handleClose}
           className="cursor-poniter w-8 h-8 flex justify-center items-center"
@@ -30,11 +31,13 @@ const Sidebar = () => {
           <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
+
       <div className="flex flex-col gap-y-2 h-[360px] md:h-[480px] lg:h-[420px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
       </div>
+
       <div className="flex flex-col gap-y-3  mt-4">
         <div className="flex w-full justify-between items-center">
           {/* total */}
@@ -45,20 +48,23 @@ const Sidebar = () => {
           {/* clear cart icon */}
           <div
             onClick={clearCart}
-            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl"
+            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-2xl"
           >
-            <FiTrash2 />
+            <FiTrash2 className="" />
           </div>
         </div>
-        <Link
+
+        {/* <Link
           to={"/"}
           className="bg-gray-200 flex p-3 justify-center items-center text-primary w-full font-medium"
         >
           View Cart
-        </Link>
+        </Link> */}
+
         <Link
           to={"/"}
-          className="bg-primary flex p-3 justify-center items-center text-white w-full font-medium"
+          onClick={handleClose}
+          className="bg-gray-200 flex p-3 justify-center items-center text-primary w-full font-medium"
         >
           Checkout
         </Link>

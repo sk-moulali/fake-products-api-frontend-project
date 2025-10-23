@@ -8,7 +8,7 @@ const ProductProvider = ({ children }) => {
     async function fetchdata() {
       const responce = await fetch("https://fakestoreapi.com/products/");
       const data = await responce.json();
-      console.log("data using async & await : ", data);
+      // console.log("data using async & await : ", data);
       setProducts(data);
     }
     fetchdata();

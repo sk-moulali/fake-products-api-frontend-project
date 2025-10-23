@@ -41,10 +41,12 @@ function ProductSinglePage() {
             <div className="text-2xl text-red-500 font-medium mb-6">
               $ {price}
             </div>
-            <p className="mb-8">{description}</p>
+            <div className="">
+              <p className="mb-8">{description}</p>
+            </div>
             <button
               onClick={() => addToCart(product, product.id)}
-              className="bg-green-600 py-4 px-8 text-white cursor-pointer hover:bg-green-500"
+              className="bg-green-600 py-4 px-8 text-white cursor-pointer hover:bg-green-400 mt-5"
             >
               Add to cart
             </button>
